@@ -67,8 +67,5 @@ fig = plt.figure() # new canvas
 plt.scatter(df_train['GrLivArea'], df_train['SalePrice'])
 plt.savefig('new_analysis_fig/GrLivArea_SalePrice.png')
 
-# export df_train to csv
-df_train.to_csv('train_clean.csv', index=False)
-
 # one-hot encoding categorical variables
 df_train = pd.get_dummies(df_train)

@@ -63,3 +63,6 @@ plt.savefig('find_outlier/GrLivArea_after.png')
 
 var = "TotalBsmtSF"
 # we can test this for outliers the same way, but we will skip it (no outliers)
+
+# export df_train to csv
+df_train.to_csv('train_clean.csv', index=False)
