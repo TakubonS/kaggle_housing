@@ -66,3 +66,6 @@ var = "TotalBsmtSF"
 
 # export df_train to csv
 df_train.to_csv('train_clean.csv', index=False)
+
+# one-hot encoding categorical variables
+df_train = pd.get_dummies(df_train)
