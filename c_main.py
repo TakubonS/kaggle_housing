@@ -62,3 +62,8 @@ plt.savefig('normality/TotalBsmtSF_after1.png')
 fig = plt.figure() # new canvas
 res = stats.probplot(df_train[df_train['TotalBsmtSF']>0]['TotalBsmtSF'], plot=plt)
 plt.savefig('normality/TotalBsmtSF_after2.png')
+
+fig = plt.figure() # new canvas
+plt.scatter(df_train['GrLivArea'], df_train['SalePrice'])
+plt.savefig('new_analysis_fig/GrLivArea_SalePrice.png')
+
