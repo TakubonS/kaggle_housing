@@ -29,3 +29,19 @@ plt.savefig('normality/SalePrice_after1.png')
 fig = plt.figure() # new canvas
 res = stats.probplot(df_train['SalePrice'], plot=plt)
 plt.savefig('normality/SalePrice_after2.png')
+
+#    GrLivArea
+fig = plt.figure() # new canvas
+sns.distplot(df_train['GrLivArea'], fit=norm)
+plt.savefig('normality/GrLivArea_before1.png')
+fig = plt.figure() # new canvas
+res = stats.probplot(df_train['GrLivArea'], plot=plt)
+plt.savefig('normality/GrLivArea_before2.png')
+
+df_train['GrLivArea'] = np.log(df_train['GrLivArea'])
+fig = plt.figure() # new canvas
+sns.distplot(df_train['GrLivArea'], fit=norm)
+plt.savefig('normality/GrLivArea_after1.png')
+fig = plt.figure() # new canvas
+res = stats.probplot(df_train['GrLivArea'], plot=plt)
+plt.savefig('normality/GrLivArea_after2.png')
