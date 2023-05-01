@@ -69,3 +69,6 @@ plt.savefig('new_analysis_fig/GrLivArea_SalePrice.png')
 
 # one-hot encoding categorical variables
 df_train = pd.get_dummies(df_train)
+
+# export df_train to csv
+df_train.to_csv('train_clean_normalized.csv', index=False)
